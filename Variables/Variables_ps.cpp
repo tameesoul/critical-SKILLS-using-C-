@@ -33,4 +33,31 @@ cout<<"even numbers only\n";
     cin>>n1>>n3>>n5>>n7;
     cout<<n2+n4+n6+n8<<" "<<n1+n3+n5+n7;
     */
+
+/////////////////////////////////////////////////////////////////////////////
+
+    /*
+    p1 
+    int num1, num2, num3;
+	num1 = 0, num2 = 1, num3 = num1 + num2, cout <<num3<<"\n"; //// 0,1,(1) 
+	num1 = num2, num2 = num3, num3 = num1 + num2, cout <<num3<<"\n"; /// 1 , 1 , (2) 
+	num1 = num2, num2 = num3, num3 = num1 + num2, cout <<num3<<"\n"; // 1 , 2 , (3)
+	num1 = num2, num2 = num3, num3 = num1 + num2, cout <<num3<<"\n"; // 2 ,3  (5)
+	num1 = num2, num2 = num3, num3 = num1 + num2, cout <<num3<<"\n"; // 3 , 5 (8)
+	num1 = num2, num2 = num3, num3 = num1 + num2, cout <<num3<<"\n"; // 5 , 8 (13) 
+	num1 = num2, num2 = num3, num3 = num1 + num2, cout <<num3<<"\n"; // 21
+	num1 = num2, num2 = num3, num3 = num1 + num2, cout <<num3<<"\n"; /// 34
+	num1 = num2, num2 = num3, num3 = num1 + num2, cout <<num3<<"\n"; // 55
+
+     */
+
+        /*  
+    int n1 , n2 , n3;
+    cin >> n1 >> n2;
+    n3 = n2 ; 
+    n2 = n1 ; 
+    n1 = n3 ;
+    cout<<n1 << " " << n2 ;
+    */
 }
+
