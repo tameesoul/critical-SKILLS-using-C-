@@ -21,10 +21,11 @@ int main()
 // cout<<result - int(result);
 
 
-int n , m; 
-cin>>n >>m;
+/// ps3
+// int n , m; 
+// cin>>n >>m;
 
-int res = n/m;
-    int x = n-(res*m); 
-    cout<<x;
+// int res = n/m;
+//     int x = n-(res*m); 
+//     cout<<x;
 }
