@@ -4,22 +4,33 @@ using namespace std;
 int main(void)
 {
 
-	int n1 , n2; 
-	char op; 
-	cin>>n1 >> op >> n2;
-	if(op =='+')
+	// int n1 , n2; 
+	// char op; 
+	// cin>>n1 >> op >> n2;
+	// if(op =='+')
+	// {
+	// 	cout<<n1+n2<<"\n";
+	// }else if (op == '*')
+	// {
+	// 	cout<<n1 * n2 <<"\n";
+	// }else if (op == '/')
+	// {
+	// 	cout<<n1/n2<<"\n";
+	// }else if(op =='-')
+	// {
+	// 	cout<<n1 -n2<<"\n";
+	// }else {
+	// 	cout<<"operation is not found";
+	// }
+
+
+	int n1,n2;
+	cin>>n1>>n2;
+	if(n1>n2)
 	{
-		cout<<n1+n2<<"\n";
-	}else if (op == '*')
-	{
-		cout<<n1 * n2 <<"\n";
-	}else if (op == '/')
-	{
-		cout<<n1/n2<<"\n";
-	}else if(op =='-')
-	{
-		cout<<n1 -n2<<"\n";
-	}else {
-		cout<<"operation is not found";
+		cout<<n2;
+	}else{
+	cout<<n1;
 	}
+	
 }
