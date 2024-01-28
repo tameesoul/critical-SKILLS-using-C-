@@ -23,14 +23,12 @@ int main(void)
 	// 	cout<<"operation is not found";
 	// }
 
-
-	int n1,n2;
-	cin>>n1>>n2;
-	if(n1>n2)
-	{
-		cout<<n2;
-	}else{
-	cout<<n1;
-	}
-	
+	int n1,n2,n3; // 10 , 20 , 30 
+	cin>>n1>>n2>>n3; 
+	int ans = n1; //// 10 
+	if(ans > n2) /// 10 > 20 ?
+		ans = n2; //10
+	if(ans > n3) // 10 > 30 ? 
+	ans = n3; //10
+	cout<<ans; //10
 }
