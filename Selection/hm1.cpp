@@ -33,15 +33,16 @@ int main(void)
 	// ans = n3; //10
 	// cout<<ans; //10
 
-	int n;
-	cin >>n;
-	if(n%2==0)
-	cout<<n%10<<"\n";
-	else if(n%2!=0 && n<1000)
-	cout<<n%100<<"\n";
-	else if(n%2!=0 && 1000>n<1000000)	
-	cout<<n%10000<<"\n";
-	else
-		cout<<-n<<"\n";
+	///p3
+	// int n;
+	// cin >>n;
+	// if(n%2==0)
+	// cout<<n%10<<"\n";
+	// else if(n%2!=0 && n<1000)
+	// cout<<n%100<<"\n";
+	// else if(n%2!=0 && 1000>n<1000000)	
+	// cout<<n%10000<<"\n";
+	// else
+	// 	cout<<-n<<"\n";
 	
 }
