@@ -13,18 +13,18 @@ int main()
 
 /// p2
 
-double n1,n2;
-cin>>n1>>n2;
+// double n1,n2;
+// cin>>n1>>n2;
 
-double result = n1/n2;
+// double result = n1/n2;
 
-cout<<result - int(result);
-
-
+// cout<<result - int(result);
 
 
+int n , m; 
+cin>>n >>m;
 
-    // float n1,n2;
-    // cin>>n1>>n2;
-    // cout<<n1/n2<<"\n";
+int res = n/m;
+    int x = n-(res*m); 
+    cout<<x;
 }
