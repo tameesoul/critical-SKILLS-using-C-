@@ -13,7 +13,12 @@ int main()
     // int last3 = num%10;
     // num/=10;
     // cout<<last1+last2 +last3 <<" "<<num;
-    int num; 
-    cin>>num;
-    cout<<(num/1000)%10;
+
+
+    // ps3
+    // int num; 
+    // cin>>num;
+    // cout<<(num/1000)%10;
+
+    
 }

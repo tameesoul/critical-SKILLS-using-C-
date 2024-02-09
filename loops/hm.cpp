@@ -26,19 +26,30 @@ int main()
     //      y--; //// 4 
     // }
     // cout<<res;
-    int num;
-    cin>>num;
-    int dig = 0;
-    while (num>0)
+    // int num;
+    // cin>>num;
+    // int dig = 0;
+    // while (num>0)
+    // {
+    //     if(num <10)
+    //     {
+    //         cout<<1;
+    //         return 0;
+    //     }
+    //     dig +=2;
+    //     num /=10;
+    // }
+    // cout<<dig<<"\n"; 
+
+    int test; 
+    cin>>test;
+    int n;
+    while (test >0)
     {
-        if(num <10)
-        {
-            cout<<1;
-            return 0;
-        }
-        dig +=2;
-        num /=10;
+        cin>>n;
+        test--;
+         int sum = n*(n+1) /2 ;
     }
-    cout<<dig<<"\n";
-    
+    cout<<n;
+    cout<<"hello"
 }

@@ -14,4 +14,5 @@ int main(void)
     // cout<<cnt;
     // return 0 ;
 
+    cout<< 354 % 100;
 }
