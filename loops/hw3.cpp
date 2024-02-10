@@ -17,20 +17,17 @@ int main()
     // }
 
     /// P2
-//    int n, m , sum ;
-//     cin >> n >> m >> sum; 
-    
-//     int cnt = 0;
-
-//     for (int a = 1; a <= n; a++) {
-//         for (int b = 1; b <= m; b++) {
-//             if (a + b == sum) {
-//                 cnt++;
-//             }
-//         }
-//     }
-
-//     cout << cnt << "\n";
+   int n, m , sum ; /// 5 , 5 , 4
+    cin >> n >> m >> sum;  // 5 ,5,4
+    int cnt = 0; // 0
+    for (int a = 1; a < n; a++) { /// 4<5 ? yes  
+    int b = sum - a; /// b = 4-4 = 0 
+    if(1<=b && b<=m) /// 1<=1 y && 1<=5 ? yes  
+    {
+        cnt++; /// 3
+    }
+    }
+    cout << cnt << "\n";
 
     return 0;
 }
