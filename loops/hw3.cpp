@@ -29,5 +29,7 @@ int main()
     }
     cout << cnt << "\n";
 
+    cout<<"keep in streak";
+
     return 0;
 }
