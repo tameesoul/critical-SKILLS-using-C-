@@ -18,23 +18,22 @@ int main()
     // cout<<cnt<<"\n";
 
     //p2 
-    int cnt=0;
-    for(int i = 1; i<=200;i++)
-    {
-        for(int j = 1 ; j<=200;j++)
-        {
-            for(int k = 1;k<=200;k++)
-            {
-                for(int t = 1;t<=200;t++)
-                {
-                    if((k+t)==(i+k))
-                    {
-                        cnt++;
-                    }
-                }
-            }
-        }
-    }
+   
 
-    cout<<cnt<<"\n";
+
+     
+
+     //p3
+     int n ; /// 3
+     cin>>n; /// 3
+    for(int i = 2 ;i<=n;i++) // 4
+    { 
+        if(n % i == 0 && i!=n)
+        {
+         cout<<"NO"<<"\n";
+        return 0;
+        }  //  
+      
+    }
+    cout<<"YES"<<"\n";
 }
