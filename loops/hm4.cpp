@@ -24,16 +24,38 @@ int main()
      
 
      //p3
-     int n ; /// 3
-     cin>>n; /// 3
-    for(int i = 2 ;i<=n;i++) // 4
-    { 
-        if(n % i == 0 && i!=n)
-        {
-         cout<<"NO"<<"\n";
-        return 0;
-        }  //  
+    //  int n ; /// 3
+    //  cin>>n; /// 3
+    // for(int i = 2 ;i<=n;i++) // 4
+    // { 
+    //     if(n % i == 0 && i!=n)
+    //     {
+    //      cout<<"NO"<<"\n";
+    //     return 0;
+    //     }  //  
       
+    // }
+    // cout<<"YES"<<"\n";
+
+    /// p4;
+    int n; /// 13 
+    cin >> n; /// 13 
+    cout << 1 << " "; /// 1
+
+    for (int i = 2; i <= n; i++) { /// 3 ,2<13
+        bool isPrime = true; /// y
+
+        for (int j = 2; j * j <= i; j++) { /// 2 , 4<=2
+            if (i % j == 0) { // 
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) { 
+            cout << i << " "; // 2
+        }
     }
-    cout<<"YES"<<"\n";
+
+    return 0;
 }
