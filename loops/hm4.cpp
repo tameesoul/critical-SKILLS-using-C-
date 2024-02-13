@@ -45,15 +45,15 @@ int main()
     for (int i = 2; i <= n; i++) { /// 3 ,2<13
         bool isPrime = true; /// y
 
-        for (int j = 2; j * j <= i; j++) { /// 2 , 4<=2
-            if (i % j == 0) { // 
+        for (int j = 2; j * j <= i; j++) { /// 2 , 4<=4
+            if (i % j == 0) { //  /// 2 % 4 
                 isPrime = false;
                 break;
             }
         }
 
         if (isPrime) { 
-            cout << i << " "; // 2
+            cout << i << " "; // 2 , 3
         }
     }
 
