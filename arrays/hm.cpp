@@ -68,21 +68,42 @@ int main()
 
     /// p4
 
-    int n ,arr[200] {};
-    cin>>n; /// 5
+    // int n ,arr[200] {};
+    // cin>>n; /// 5
+    // for(int i = 0;i<n;i++)
+    // {
+    //     cin >> arr[i]; /// 10 ,20,30,40,50;
+    // }
+    // int temp; /// dec
+    // for(int i = 0 ;i<n/2;++i) /// i =0;i < 5;
+    // {
+    //     temp = arr[i]; // 
+    //     arr[i] = arr[n-i-1]; 
+    //     arr[n-i-1] = temp; 
+    //     cout<<arr[i] <<" ";
+    // }
+    //   for(int i = 0; i < n; ++i) {
+    //     cout << arr[i] << " ";
+    // }
+
+
+    int n , arr[200] {}; //// 5 
+    cin>>n;  // 5
     for(int i = 0;i<n;i++)
     {
-        cin >> arr[i]; /// 10 ,20,30,40,50;
+        cin>>arr[i]; //{1,1,1,2,2}
     }
-    int temp; /// dec
-    for(int i = 0 ;i<n/2;++i) /// i =0;i < 5;
+
+    int max_value = -1 , max_repeat = -1; 
+    for(int i = 0 ; i<n;i++) /// i =  , <5 , i++
     {
-        temp = arr[i]; // 
-        arr[i] = arr[n-i-1]; 
-        arr[n-i-1] = temp; 
-        cout<<arr[i] <<" ";
+        int cnt = 0; // 0 
+        for(int j = 0; j<n;j++) ///j = 3 , 3<5 ,j++
+            cnt+=arr[i] == arr[j]; // arr[1] == arr[2] ?no cnt = 0;
+        if(max_repeat == -1 || max_repeat <cnt) /// 
+        {
+            max_repeat = cnt , max_value = arr[i]; // max_rept = 3 , max_va = 1;
+        }
     }
-      for(int i = 0; i < n; ++i) {
-        cout << arr[i] << " ";
-    }
+    cout<<max_repeat <<" " << max_value ;
 }
