@@ -22,14 +22,14 @@ int main()
 
     //p2
 
-    int const size = 6;
-    int arr[size] {};
-    for(int i = 0;i<size;i++)
+    int n ,  arr[200] {};
+    cin>>n;
+    for(int i = 0;i<n;i++)
     {
         cin>>arr[i];
     }
     int max_1 =arr[0] , max_2 = arr[1];
-    for(int i = 2;i<size;i++)
+    for(int i = 2;i<n;i++)
     {
         if(arr[i]>max_1)
         {
