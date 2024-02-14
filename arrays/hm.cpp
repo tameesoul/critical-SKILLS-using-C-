@@ -22,6 +22,29 @@ int main()
 
     //p2
 
+    // int n ,  arr[200] {};
+    // cin>>n;
+    // for(int i = 0;i<n;i++)
+    // {
+    //     cin>>arr[i];
+    // }
+    // int max_1 =arr[0] , max_2 = arr[1];
+    // for(int i = 2;i<n;i++)
+    // {
+    //     if(arr[i]>max_1)
+    //     {
+    //         max_2 = max_1 ;
+    //         max_1 = arr[i];
+    //     }else if (arr[i]>max_2)
+    //     {
+    //         max_2 = arr[i];
+    //     }
+        
+    // }
+   /// cout<<max_1 + max_2;
+
+
+   //// same p3 but with the sum of the two values 
     int n ,  arr[200] {};
     cin>>n;
     for(int i = 0;i<n;i++)
@@ -41,5 +64,5 @@ int main()
         }
         
     }
-    cout<<max_1<<" " << max_2;
+    cout<<max_1 + max_2;
 }
