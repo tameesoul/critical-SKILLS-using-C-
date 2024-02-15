@@ -9,7 +9,7 @@ int main()
     for(int i = 0;i<n;i++) /// 0 , 0<5
     {
         cin>>numbers[i]; /// {1,1}
-        freqeunt[numbers[i]]++; /// [1]++ {0,2 , }
+        freqeunt[numbers[i]]++; /// [1]++ {0,2, }
     }
 
     int max_pos = freqeunt[0];
@@ -21,4 +21,5 @@ int main()
         }
     }
     cout<<max_pos<<" " <<freqeunt[max_pos];
+    cout<<"keep in streak";
 }

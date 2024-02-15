@@ -53,7 +53,7 @@ int main()
         }
 
         if (isPrime) { 
-            cout << i << " "; // 2 , 3
+            cout << i << " "; // 2 , 
         }
     }
 
