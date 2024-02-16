@@ -21,5 +21,5 @@ int main()
         }
     }
     cout<<max_pos<<" " <<freqeunt[max_pos];
-    cout<<"keep in streak";
+    cout<<"keep in streak#2";
 }
