@@ -57,8 +57,6 @@ int main()
     // }
     // cout<<max<<" "<< min ;
 
-
-
     ///p3
 
     // int n , number[500];
@@ -76,4 +74,27 @@ int main()
     //         cout<<number[i]<<" ";
     //     }
     // }
+
+    //p4
+
+    int n , arr[200];
+    cin>>n;
+    for(int i = 0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    bool is_palindrome = true;
+    for(int i = 0;i<n/2;i++)
+    {
+        if(arr[i] != arr[n-i-1])
+        {
+            is_palindrome = false;
+        }
+    }
+    if(is_palindrome)
+    {
+        cout<<"YES!";
+    }else{
+        cout<<"NO!";
+    }
 }
