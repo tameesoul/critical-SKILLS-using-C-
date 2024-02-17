@@ -56,4 +56,24 @@ int main()
     //     cout<<numbers[i]<<"\n";
     // }
     // cout<<max<<" "<< min ;
+
+
+
+    ///p3
+
+    // int n , number[500];
+    // cin>>n;
+    // for(int i = 0;i<n;i++)
+    // {
+    //  cin>>number[i];
+    // }
+   
+    // cout<<number[0]<<" ";
+    // for(int i = 1;i<n;i++)
+    // {
+    // if(number[i] != number[i-1])
+    //     {
+    //         cout<<number[i]<<" ";
+    //     }
+    // }
 }
