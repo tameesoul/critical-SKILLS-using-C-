@@ -77,24 +77,45 @@ int main()
 
     //p4
 
-    int n , arr[200];
+    // int n , arr[200];
+    // cin>>n;
+    // for(int i = 0;i<n;i++)
+    // {
+    //     cin>>arr[i];
+    // }
+    // bool is_palindrome = true;
+    // for(int i = 0;i<n/2;i++)
+    // {
+    //     if(arr[i] != arr[n-i-1])
+    //     {
+    //         is_palindrome = false;
+    //     }
+    // }
+    // if(is_palindrome)
+    // {
+    //     cout<<"YES!";
+    // }else{
+    //     cout<<"NO!";
+    // }
+
+    int n , number[200];
     cin>>n;
     for(int i = 0;i<n;i++)
     {
-        cin>>arr[i];
+        cin>>number[i];
     }
-    bool is_palindrome = true;
-    for(int i = 0;i<n/2;i++)
+
+    int smallest_pair = 0;
+    for(int i = 0;i<n;i++)
     {
-        if(arr[i] != arr[n-i-1])
+        for(int j = 0;j<n;j++)
         {
-            is_palindrome = false;
+            if(j<i&&number[i]+number[j]+(j-i) )
+            {
+                smallest_pair = number[i]+number[j]+(j-i);
+            }
         }
     }
-    if(is_palindrome)
-    {
-        cout<<"YES!";
-    }else{
-        cout<<"NO!";
-    }
+
+    cout<<smallest_pair<<"\n";
 }
