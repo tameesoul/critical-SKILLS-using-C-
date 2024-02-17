@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    ///p1
+    
     // int n , numbers[200]={};
     // cin>>n;
     // for(int i =0;i<n;i++)
@@ -105,17 +105,22 @@ int main()
         cin>>number[i];
     }
 
-    int smallest_pair = 0;
+   // int smallest_pair = 0;
+   int min;
+   int first_time = true;
+
     for(int i = 0;i<n;i++)
     {
-        for(int j = 0;j<n;j++)
+        for(int j = i+1;j<n;j++)
         {
-            if(j<i&&number[i]+number[j]+(j-i) )
+            int temp =number[i]+number[j]+j-i;
+            if( first_time || min<temp)
             {
-                smallest_pair = number[i]+number[j]+(j-i);
+                min = temp;
+                first_time = false;
             }
         }
     }
 
-    cout<<smallest_pair<<"\n";
+    cout<<min<<"\n";
 }
