@@ -26,24 +26,39 @@ int main()
 //     cout<<"\n";
 //   }
 
-      int n;
-    cin >> n;
-    string arr[50];
 
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+/// p2;
+    //   int n;
+    // cin >> n;
+    // string arr[50];
+
+    // for (int i = 0; i < n; i++) {
+    //     cin >> arr[i];
+    // }
 
    
-    for (int i = 0; i < n; i++) {
-         int cnt = 0;
-        if (arr[i][0] > 'Z') { 
-            cnt++;
-            cout << arr[i] << " " << cnt <<"\n";
+    // for (int i = 0; i < n; i++) {
+    //      int cnt = 0;
+    //     if (arr[i][0] > 'Z') { 
+    //         cnt++;
+    //         cout << arr[i] << " " << cnt <<"\n";
             
+    //     }
+    // }
+
+
+    // return ;
+
+    string sent;
+    cin>>sent;
+    int size = sent.size();
+    for(int i = 0;i<size;i++)
+    {
+        if(sent[i]<'['){
+            cout<<sent[i];
+        }else if (sent[i]<='9')
+        {
+            cout<<sent[i+2];
         }
     }
-
-
-    return 0;
 }
