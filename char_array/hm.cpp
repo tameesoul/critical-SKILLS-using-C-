@@ -4,25 +4,46 @@ using namespace std;
 
 int main()
 {
-  string s1 , s2;
-  cin>>s1 >>s2;
-  int max_size = s1.size();
-  if(max_size<s2.size())
-  {
-    max_size = s2.size();
-  }
+//   string s1 , s2;
+//   cin>>s1 >>s2;
+//   int max_size = s1.size();
+//   if(max_size<s2.size())
+//   {
+//     max_size = s2.size();
+//   }
 
-  for(int i = 0;i<max_size;i++)
-  {
-    if(i<s1.size())
-    {
-        cout<<s1[i];
-    }
-    if(i<s2.size())
-    {
-        cout<<s2[i];
+//   for(int i = 0;i<max_size;i++)
+//   {
+//     if(i<s1.size())
+//     {
+//         cout<<s1[i];
+//     }
+//     if(i<s2.size())
+//     {
+//         cout<<s2[i];
+//     }
+
+//     cout<<"\n";
+//   }
+
+      int n;
+    cin >> n;
+    string arr[50];
+
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
 
-    cout<<"\n";
-  }
+   
+    for (int i = 0; i < n; i++) {
+         int cnt = 0;
+        if (arr[i][0] > 'Z') { 
+            cnt++;
+            cout << arr[i] << " " << cnt <<"\n";
+            
+        }
+    }
+
+
+    return 0;
 }
