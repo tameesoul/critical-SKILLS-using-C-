@@ -4,10 +4,13 @@ using namespace std;
 
 int main()
 {
-    int value;
-    string line;
-    cin>>value;
-    getline(cin,line);
-    getline(cin,line);
-    cout<<value <<"\n"<<"**"<<line<<"**";
+	string words[] {"Cpp", "is", "challenging!"};
+ 
+	int len = 3;
+	string all;
+	for (int i = 0; i < 3; ++i)
+		all += words[i] + ",";
+ 
+	cout<<all;
+	return 0;
 }
