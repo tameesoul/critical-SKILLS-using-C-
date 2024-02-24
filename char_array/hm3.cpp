@@ -9,7 +9,7 @@ int main() {
     int group_Size = 1; /// 1 
 
     for (int i = 1; i < (int)str.size(); i++) {
-        if (str[i - 1] != str[i]) { /// 1-1= 0 > a != 1 = 1 no
+        if (str[i - 1] != str[i]) { 
             if (i > 1) {
                 cout << "_";
             }
