@@ -3,20 +3,37 @@ using namespace std;
 
 int main()
 {
-    double grads[7][4];
-    for(int row = 0;row<6;++row)
+
+    int numbers[3][4] = 
     {
-        for(int col = 0;col<4;++col)
+    {1,2,3,4},
+    {1,2,3,4},
+    {1,2,3,4},
+    };
+    for(int row = 0;row<3;row++)
+    {
+        cout<<"row"<<row <<":";
+        for(int col = 0;col<4;col++)
+        {
+            cout<<numbers[row][col];
+        }
+        cout<<"\n";
+    }
+    
+    int grads[7][4];
+    for(int row =0; row<7;row++)
+    {
+        for(int col = 0;col<4;col++)
         {
             cin>>grads[row][col]; 
         }
     }
-    for(int row = 0;row<6;++row)
+    for(int row =0; row<7;row++)
     {
-        cout<<"row "<<row<<":"; 
-        for(int col = 0;col<4;++col)
+        cout<<"row "<< row <<":";
+        for(int col = 0;col<4;col++)
         {
-            cout<<grads[row][col]<<" "; 
+           cout<<grads[row][col];
         }
 
         cout<<"\n";
