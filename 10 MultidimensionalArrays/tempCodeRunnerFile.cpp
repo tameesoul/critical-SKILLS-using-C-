@@ -1,4 +1,4 @@
-    // int grads[7][4];
+  // int grads[7][4];
     // for(int row =0; row<7;row++)
     // {
     //     for(int col = 0;col<4;col++)
