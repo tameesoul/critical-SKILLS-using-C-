@@ -100,28 +100,32 @@ int main()
 
 // p3
 
-int rows , cols;
-cin >> rows >> cols;
-int MAT[100][100];
-for(int i = 0;i<rows;i++)
-{
-    for(int j = 0;j<cols;j++)
-    {
-        cin >> MAT[i][j];
-    }
-}
-int c1 , c2;
-cin >> c1 >> c2;
-for(int i =0;i<rows; i++)
-{
-    int temp  = MAT[i][c1];
-    MAT[i][c1] = MAT[i][c2];
-    MAT[i][c2] = temp;
-}
+// int rows , cols;
+// cin >> rows >> cols;
+// int MAT[100][100];
+// for(int i = 0;i<rows;i++)
+// {
+//     for(int j = 0;j<cols;j++)
+//     {
+//         cin >> MAT[i][j];
+//     }
+// }
+// int c1 , c2;
+// cin >> c1 >> c2;
+// for(int i =0;i<rows; i++)
+// {
+//     int temp  = MAT[i][c1];
+//     MAT[i][c1] = MAT[i][c2];
+//     MAT[i][c2] = temp;
+// }
 
-for(int i = 0;i<rows;i++)
-{
-    for(int j = 0;j<cols;j++)
-    cout<<MAT[i][j];
-}
+// for(int i = 0;i<rows;i++)
+// {
+//     for(int j = 0;j<cols;j++)
+//     cout<<MAT[i][j];
+// }
+
+// p4;
+
+
 }
