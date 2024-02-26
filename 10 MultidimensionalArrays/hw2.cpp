@@ -55,45 +55,73 @@ int main()
 
 //// P2;
 
-int rows , cols ;
+// int rows , cols ;
+// cin >> rows >> cols;
+// int MAT[100][100];
+// for(int i = 0; i<rows;i++)
+// {
+//     for(int j = 0; j<cols;j++)
+//     {
+//         cin >> MAT[i][j];
+//     }
+// }
+// int i = 0 , j = 0;
+// int left_diaganol = 0;
+
+// while (i<rows && j<cols)
+// {
+//     left_diaganol +=MAT[i++][j++];
+// }
+// int right_diagonal = 0;
+// i = 0 , j = cols -1;
+// while(i<rows && j<cols)
+// {
+//     right_diagonal += MAT[i++][j--];
+// }
+
+// int last_row = 0;
+// j = 0;
+// while (j<cols)
+// {
+//     last_row += MAT[rows-1][j++];
+// }
+// int last_col = 0;
+// i = 0;
+// while(i<rows)
+// {
+//     last_col +=MAT[i++][cols-1]; 
+// }
+
+// cout<<"left_diaganol = " << left_diaganol <<" "
+// <<"right_diaganol = " << right_diagonal << " "
+// <<"last_col ="  << last_col <<" "
+// << "last_row = "<<last_row<<"\n";
+
+
+// p3
+
+int rows , cols;
 cin >> rows >> cols;
 int MAT[100][100];
-for(int i = 0; i<rows;i++)
+for(int i = 0;i<rows;i++)
 {
-    for(int j = 0; j<cols;j++)
+    for(int j = 0;j<cols;j++)
     {
         cin >> MAT[i][j];
     }
 }
-int i = 0 , j = 0;
-int left_diaganol = 0;
-
-while (i<rows && j<cols)
+int c1 , c2;
+cin >> c1 >> c2;
+for(int i =0;i<rows; i++)
 {
-    left_diaganol +=MAT[i++][j++];
-}
-int right_diagonal = 0;
-i = 0 , j = cols -1;
-while(i<rows && j<cols)
-{
-    right_diagonal += MAT[i++][j--];
+    int temp  = MAT[i][c1];
+    MAT[i][c1] = MAT[i][c2];
+    MAT[i][c2] = temp;
 }
 
-int last_row = 0;
-j = 0;
-while (j<cols)
+for(int i = 0;i<rows;i++)
 {
-    last_row += MAT[rows-1][j++];
+    for(int j = 0;j<cols;j++)
+    cout<<MAT[i][j];
 }
-int last_col = 0;
-i = 0;
-while(i<rows)
-{
-    last_col +=MAT[i++][cols-1]; 
-}
-
-cout<<"left_diaganol = " << left_diaganol <<" "
-<<"right_diaganol = " << right_diagonal << " "
-<<"last_col ="  << last_col <<" "
-<< "last_row = "<<last_row<<"\n";  
 }
