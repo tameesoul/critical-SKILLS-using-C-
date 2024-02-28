@@ -42,7 +42,6 @@ int main()
                 cnt +=is_prime[i][j];
             }
         }
-
         cout << cnt <<"\n";
     }
 }
