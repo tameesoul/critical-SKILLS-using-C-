@@ -4,7 +4,7 @@ using namespace std;
 const int MAX_EMPLOYEES = 100;
 
 // Function to add a new employee
-void addEmployee(string name[], int age[], float salary[], char Gender[], int& cnt) {
+void addEmployee(string name[], int age[], float salary[], char Gender[], int&cnt) {
     cout << "Enter Employee Name: "; cin >> name[cnt]; cout << "\n";
     cout << "Enter Employee salary: "; cin >> salary[cnt]; cout << "\n";
     cout << "Enter Employee gender: "; cin >> Gender[cnt]; cout << "\n";
