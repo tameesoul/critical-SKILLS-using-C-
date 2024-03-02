@@ -21,7 +21,6 @@ int main()
     {
         cin>>arr[i];
     }
-
     if(palinderom(arr,n))
     {
         cout<<"YES";
