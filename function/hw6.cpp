@@ -2,24 +2,23 @@
 using namespace std;
 
 
-void is_power(int arr[] , int leng ,int n)
+void is_power(int arr[], int leng = 5 ,int n = 2)
 {
-    int power = n;
-    for(int i = 0;i<leng;i++)
+    arr[0] = 1;
+    for(int i = 1 ; i<leng;i++)
     {
-        if(n%2==0)
-        {
-            power+=arr[i+2]*n; 
-        }
-        power += arr[i+1]*n;
+        arr[i] = arr[i-1] * n;
     }
-
-    cout<<power<<" ";
 }
 int main()
 {
-    int arr[100] , leng , n;
+     int  arr[100]; 
+     int leng , n;
     cin >>leng >> n;
 
-    is_power(arr,leng,n);
+    is_power(arr, leng,n);
+    for(int i = 0;i<leng;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
 }
