@@ -3,12 +3,11 @@ using namespace std;
 
 int power(int n , int p = 2)
 {
-    if(n==0)
-    {
-        return 1;
-    }
-    p--;
-      power(n)*n;
+    if(p==0) // 4 == 1 n
+    
+        return 1 ;
+    
+    return n * power(n , p-1); 
 }
 int main()
 {
