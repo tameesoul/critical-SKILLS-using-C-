@@ -14,4 +14,5 @@ int main()
 {
     int arr[] = {1,2,3,4,5};
     cout<<arr_max(arr,5);
+    // keep in streak
 }
