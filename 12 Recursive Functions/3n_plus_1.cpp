@@ -13,4 +13,6 @@ int main() {
     cout<<endl;
     cout<<"X=  "<<X<<endl;
 return 0;
+
+/// i love Floral Fury 
 }
