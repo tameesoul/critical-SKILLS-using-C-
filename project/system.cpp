@@ -1,6 +1,20 @@
 #include<iostream>
 using namespace std;
 
+string name[100];
+int specialization[15];
+bool status[100];
+int cnt = 1;
+void add_new()
+{
+    cout<<"Enter the specialization for the patient"<<" "; cin>>specialization[cnt]; cout<<"\n";
+    cout<<"Enter the name of the patient"<<" "; cin>>name[cnt];cout<<"\n";
+    cout<<"Enter the patient status"<<" "; cin>>status[cnt];cout<<"\n";
+    cnt ++;
+
+    cout<<"added successfully\n";
+}
+
 int menu()
 {
     int choice = -1;
@@ -26,7 +40,7 @@ void system()
          int choice=menu();
          if(choice ==1)
          {
-            cout<<"hello,world\n";
+            add_new();
          }
     }
 }
