@@ -1,30 +1,42 @@
 #include <iostream>
 using namespace std;
 
-struct emplyee {
+struct employee
+{
 	string name;
 	int age;
 	double salary;
 	char gender;
 };
 
-const int MAX = 10000;
+const int MAX = 1000;
 
-emplyee emplyees_arr[MAX];
-int added = 0;	// Number of employees
-
-
+employee employee_arr[MAX];
+int added = 0;
 
 
-int main() {
-	emplyee first = { "mostafa", 10, 1200.5, 'M' };
-	emplyees_arr[added++] = first;
-	emplyees_arr[added].name = "hani";
-	emplyees_arr[added].age = 55;
-	emplyees_arr[added].salary = 750;
-	emplyees_arr[added].gender = 'M';
+void add_employee()
+{
+	cout<<"enter info about employee\n"; 
+	cin>>employee_arr[added].name >> employee_arr[added].age >> employee_arr[added].salary
+	>> employee_arr[added].gender;
 	added++;
-
 }
+void print_emp()
+{
+	for(int i =0;i<added;i++)
+	{
+		employee e = employee_arr[i]; 
+		cout<<e.name<<" " <<e.age << e.salary <<" " <<e.gender;
+
+	}
+}
+int main()
+{
+	add_employee();
+	print_emp();
+}
+
+
 
 
