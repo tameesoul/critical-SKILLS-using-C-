@@ -10,7 +10,6 @@ void print(priority_queue<int>&pq)
         pq.pop();
     }
 }
-
 int main()
 {
     priority_queue<int> pq;

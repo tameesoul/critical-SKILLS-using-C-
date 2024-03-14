@@ -1,16 +1,21 @@
-#include<iostream>
-using namespace std;
-
-template <typename type>
-type mymax(type a  , type b)
-{
-    if(a > b)
-    return a;
-    return b;
-}
-int main()
-{
-    cout<<mymax(1,3)<<"\n";
-    cout<<mymax(1.4,3)<<"\n"; /// syntax error 
-    cout<<mymax(int)(1.4,5)<<"\n";
-}
+    #include <iostream>
+    #include <algorithm>
+    using namespace std;
+     
+    template<class T>
+    void fun(T a) {
+    	cout << "[" << a << "]";
+    }
+     
+    template<>
+    int fun(string str) {
+    	cout << "{{" << str << "}}";
+     
+    	return str.size();
+    }
+     
+    int main() {
+    	fun(10.5), fun("mostafa");
+     
+    	return 0;
+    }
