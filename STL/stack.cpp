@@ -19,6 +19,5 @@ int main()
     st.push("ahemd");
     st.push("tamer");
     st.push("elsayed");
-
     print(st);
 }
