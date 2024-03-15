@@ -31,4 +31,5 @@ int main()
     cout<<boolalpha;
   cout<<is_palindrome("hello")<<"\n";
   cout<<is_palindrome("ABBA");
+  
 }
