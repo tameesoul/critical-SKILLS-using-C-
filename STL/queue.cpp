@@ -3,19 +3,18 @@
 using namespace std;
 int main()
 {
-    queue<int>q;
-    q.push(5);
-    q.push(10);
-    q.push(5);
-    q.push(12);
-    q.push(1);
-    //// using queue with string
-    queue<string>q_string; 
-    q_string.push("ahmedtamee");
 
-    while (!q_string.empty())
+    queue <int> q;
+    q.push(5);
+    q.push(4);
+    q.push(3);
+    q.push(2);
+    q.push(1); 
+
+    while (!q.empty())
     {
-        cout<<q_string.front();
-        q_string.pop();
+        cout<<q.front()<<" ";
+        q.pop();
     }
+    
 }
