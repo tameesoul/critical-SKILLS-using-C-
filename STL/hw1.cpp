@@ -1,39 +1,38 @@
 #include<iostream>
-#include<queue>
+#include <queue>
 using namespace std;
 
-int sum = 0;
-queue<int>q;
-struct last_k_n
-{
-    int k;
-     last_k_n(int _k)
-    {
-        k = _k;
-    }
+struct last_k_numbers_sum_stream {
+	int k;
 
-    int next(int num)
-    {
-        q.push(num);
-        sum += num;
+	int sum = 0;
+	queue<int> q;
 
-        for((int)q.size()>k)
-        {
-            sum -=q.front();
-            q.pop();
-        };
-        return sum;
-    }
+	last_k_numbers_sum_stream(int _k) {
+		k = _k;
+	}
+
+	int next(int new_num) {
+		// Compute and return sum of last K numbers sent so far
+		q.push(new_num);
+		sum += new_num;
+
+		if((int)q.size() > k) {
+			sum -= q.front();
+			q.pop();
+		}
+
+		return sum;
+	}
 };
 
-int main()
-{
 
-    last_k_n processor(4);
-    int num;
-    while (cin>>num)
-    {
-        cout<<processor.next(num);
-    }
-    
+int main() {
+	last_k_numbers_sum_stream processor(4);
+
+	int num;
+	while(cin>>num)
+		cout<<processor.next(num)<<"\n";
+
+	return 0;
 }
