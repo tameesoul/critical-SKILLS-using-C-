@@ -1,1 +1,5 @@
-    dq.push_front(6);
+struct triple {
+// 	int first;
+// 	string second;
+// 	double third;
+// };

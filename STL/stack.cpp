@@ -6,8 +6,7 @@ void print(stack<string>st)
 {
     while (!st.empty())
     {
-        cout<<st.top();
-        cout<<"\n";
+        cout<<st.top()<<" ";
         st.pop();
     }
     
@@ -15,9 +14,8 @@ void print(stack<string>st)
 int main()
 {
     stack<string> st;
-
-    st.push("ahemd");
-    st.push("tamer");
-    st.push("elsayed");
+    st.push("elsyed"); // 1
+    st.push("tamer"); //2
+    st.push("ahmed");///3 last in first out 
     print(st);
 }
