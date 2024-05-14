@@ -3,30 +3,35 @@
 using namespace std;
 
 
-void insertionSort(int x[]) //// 9,2,4,5
+
+void insertion_sort(int numbers[] , int n) 
 {
-    int key = 0 ;
-    for(int i = 1; i<=x.size();i++) // i = 1 ,
+    int key = 0;
+    //// 8,3,5,2
+    for(int i = 1; i<n;i++)    
     {
-        key = x[i]; // key = 2
-        for(int j = i-1;j>=0;j++) /// j = 0 , 
+        key = numbers[i]; //// 2 
+        int j = i-1;  /// 0 /// j = 1 
+        while (j>=0 && numbers[j]>key) /// numbers[0] = 8 > 3
         {
-            if(x[j]>key)
-            {
-                x[j+1] = x[j];
-            }else{
-                break;
-            }
+            numbers[j+1] = numbers[j]; /// [3] = [8] 
+            j--; /// j = -1  break;
         }
-        x[j+1] = key;
+        numbers[j+1] = key; /// numbers[0] = 3
     }
-    for(int i = 0;i<x.size();i++)
+    for(int i = 0;i<n;i++)
     {
-        cout<<x[i]<<" ";
+        cout<<numbers[i]<<" ";
     }
+
 }
 int main()
 {
-    int x[] {1,8,2,5,6};
-    insertionSort(x);
+    int n ,x[1000];
+    cin >> n;
+    for(int i = 0;i<n;i++)
+    {
+    cin >>x[i];
+    }
+    insertion_sort(x,n);
 }
