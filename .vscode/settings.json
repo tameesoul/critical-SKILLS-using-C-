@@ -46,7 +46,16 @@
         "queue": "cpp",
         "deque": "cpp",
         "span": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "stack": "cpp",
+        "algorithm": "cpp",
+        "optional": "cpp",
+        "ranges": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "xtree": "cpp",
+        "fstream": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
