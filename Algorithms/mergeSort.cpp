@@ -44,7 +44,7 @@ void merge(int array [] , int start , int midpoint , int end)
     }
     while (j<right_length)
     {
-        array[k] = right_array[i];
+        array[k] = right_array[j];
         j++;
         k++;
     }
@@ -53,7 +53,7 @@ void merge(int array [] , int start , int midpoint , int end)
 }
 void mergeSort(int array[] , int start, int end)
 {
-    if(start >= start){return;}
+    if(start >= end){return;}
     
     int midpoint = (end + start)/2;
     mergeSort(array, start, midpoint);
