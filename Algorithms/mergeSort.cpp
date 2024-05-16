@@ -63,9 +63,9 @@ void mergeSort(int array[] , int start, int end)
 
 int main()
 {
-    int array [] = {10,4,8,11,6};
-    mergeSort(array, 0, 4);
-    for(int i = 0 ; i<5 ; i++)
+    int array [] = {8,5,2,4};
+    mergeSort(array, 0, 3);
+    for(int i = 0 ; i<4 ; i++)
     {
         cout<<array[i]<<" ";
     }

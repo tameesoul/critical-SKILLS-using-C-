@@ -24,7 +24,7 @@ void insertion_sort(int numbers[] , int n)
 }
 int main()
 {
-    int n ,x[1000];
+    int n,x[1000];
     cin >> n;
     for(int i = 0;i<n;i++)
     {

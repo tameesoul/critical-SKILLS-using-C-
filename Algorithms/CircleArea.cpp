@@ -2,8 +2,6 @@
 #include<cmath>
 using namespace std;
  double const Pi = 3.14159;
-
-
  void CircleArea(double r)
  {
     double A = Pi * pow(r,2);
