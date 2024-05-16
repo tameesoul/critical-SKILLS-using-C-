@@ -1,14 +1,12 @@
 #include<iostream>
 using namespace std;
-
-
 void binarySearch( int n,int array[] , int key )
 {
     int low = 0; 
     int high = n-1;
     int mid = (low + high) / 2;
 
-    while(low <= high) /// n 
+    while(low <= high) /// log n
     {
         if(key == array[mid])
         {
@@ -21,7 +19,8 @@ void binarySearch( int n,int array[] , int key )
             high = mid - 1;
         }
         mid = (low + high) / 2;
-    }  
+    }
+    cout<< "key not found";  
 }
 int main()
 {
