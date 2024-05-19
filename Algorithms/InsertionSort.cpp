@@ -1,34 +1,40 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include<vector>
 using namespace std;
-void insertion_sort(int numbers[] , int n) 
+
+void insertion_sort(vector<int>items , int n)
 {
-    int key = 0;
-    //// 8,3,5,2
-    for(int i = 1; i<n;i++)     /// n 
+    int key = 0; 
+
+    for(int i = 1;i<=n;i++)
     {
-        key = numbers[i]; //1
-        int j = i-1;  //1
-        while (j>=0 && numbers[j]>key)  /// n 
+        key = items[i];
+
+        int j = i-1;
+
+        while (j>=0 && items[j]>key)
         {
-            numbers[j+1] = numbers[j]; ///1
-            j--; ///1
+            items[j+1] = items[j];
+            j--;
         }
-        numbers[j+1] = key;   ///1 
-    }
-    for(int i = 0;i<n;i++) /// n 
-    {
-        cout<<numbers[i]<<" ";
+        items[j+1] = key;
     }
 
+    for(int value : items)
+    {
+        cout<<value <<" ";
+    }
 }
+
+
 int main()
 {
-    int n,x[1000];
-    cin >> n;
-    for(int i = 0;i<n;i++)
+    int n ;
+    cin>>n;
+    vector<int>items(n);
+    for(int i =0;i<n;i++)
     {
-    cin >>x[i];
+        cin >> items[i];
     }
-    insertion_sort(x,n);
+    insertion_sort(items , n);
 }
