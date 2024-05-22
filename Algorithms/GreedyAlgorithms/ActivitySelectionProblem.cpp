@@ -2,7 +2,6 @@
 #include<queue>
 #include<vector>
 using namespace std;
-
 void ActivitySelectionProblem(vector<int>start,vector<int>end)
 {
     int n=start.size();
@@ -17,7 +16,6 @@ void ActivitySelectionProblem(vector<int>start,vector<int>end)
             j = i;
         }
     }
-
     for(int value : selection)
     {
         cout<<value<<" ";
