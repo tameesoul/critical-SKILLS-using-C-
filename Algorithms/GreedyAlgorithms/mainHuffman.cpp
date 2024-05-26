@@ -1,10 +1,10 @@
-#include "CharFreq.h"
+#include "Huffman.h"
 #include <iostream>
+#include <unordered_map>
 
 using namespace std;
 
 int main() {
-  CharFreq cf;
   string msg =
       "The output from Huffman's algorithm can be viewed as a variable length "
       "code table for encoding a source symbol. The algorithm derives this "
@@ -18,7 +18,12 @@ int main() {
       "optimal among all compression methods it is replaced with arithmetic "
       "coding or asymmetric numeral systems if better compression ratio is "
       "required.";
-  // cf.ASCIIMethod(msg);
-  cf.AnyCodeMethod(msg);
+
+  Huffman huff(msg);
+
+  for (auto const &[k, v] : huff.codes) {
+    cout << k << " " << v << endl;
+  }
+
   return 0;
 }
