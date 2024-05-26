@@ -3,7 +3,6 @@
 #include <unordered_map>
 
 using namespace std;
-
 int main() {
   string msg =
       "The output from Huffman's algorithm can be viewed as a variable length "
