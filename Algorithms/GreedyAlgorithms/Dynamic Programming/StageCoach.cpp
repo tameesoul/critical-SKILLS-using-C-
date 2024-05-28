@@ -2,7 +2,7 @@
 #include <climits>
 #include <vector>
 #include <string>
-#include <algorithm> // For find and distance
+#include <algorithm>
 
 using namespace std;
 
