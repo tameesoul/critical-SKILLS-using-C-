@@ -11,7 +11,6 @@ int main()
     int cols = text_0.length();
     vector<vector<int>> DP(rows + 1, vector<int>(cols + 1, 0));
 
-    // Fill DP table
     for(int i = 1; i <= rows; i++)
     {
         for(int j = 1; j <= cols; j++)
@@ -27,11 +26,8 @@ int main()
         }
     }
 
-    // Finding the length of LCS
     int lcs_length = DP[rows][cols];
-    
-    // Reconstructing the LCS string
-    string lcs_string = "";
+        string lcs_string = "";
     int i = rows, j = cols;
     while(i > 0 && j > 0)
     {
