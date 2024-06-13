@@ -47,6 +47,8 @@ class LinkedList
     public:
     LinkedListNode *head = NULL; 
     LinkedListNode *tail = NULL;
+    int length = 0;  // added length attribute
+
     void InsertLast(int _data)
     {
         LinkedListNode *newNode = new LinkedListNode(_data);
@@ -59,6 +61,7 @@ class LinkedList
             this->tail->next = newNode;
             this->tail = newNode;
         }
+        length++;
     }
 
     void InsertAfter(LinkedListNode *node, int _data)
@@ -74,29 +77,57 @@ class LinkedList
         {
             this->tail = newNode;
         }
+        length++;
     }
 
-    linkedListNode *findParent(linkedListNode *node) {
-    for (auto itr = this->begin(); itr.current() != NULL; itr.next()) {
-      if (itr.current()->next == node) {
-        return itr.current();
-      }
+    LinkedListNode *findParent(LinkedListNode *node) {
+        for (auto itr = this->begin(); itr.current() != NULL; itr.next()) {
+            if (itr.current()->next == node) {
+                return itr.current();
+            }
+        }
+        return NULL;
     }
-    return NULL;
-  }
-    void insertBefore(linkedListNode *node, int _data) {
-    linkedListNode *newnode = new linkedListNode(_data);
-    newnode->next = node;
 
-    linkedListNode *parentNode = this->findParent(node);
+    void insertBefore(LinkedListNode *node, int _data) {
+        LinkedListNode *newnode = new LinkedListNode(_data);
+        newnode->next = node;
 
-    if (parentNode == NULL) {
-      this->head = newnode;
-    } else {
-      parentNode->next = newnode;
+        LinkedListNode *parentNode = this->findParent(node);
+
+        if (parentNode == NULL) {
+            this->head = newnode;
+        } else {
+            parentNode->next = newnode;
+        }
+        length++;
     }
-    this->length++;
-  }
+
+    void DeleteNode(LinkedListNode *node)
+    {
+        if(this->head == this->tail)
+        {
+            this->head = NULL;
+            this->tail = NULL;
+        }
+        else if(this->head == node)
+        {
+            this->head= node->next;
+        }
+        else 
+        {
+            LinkedListNode *parentNode = this->findParent(node);
+            if(this->tail == node)
+            {
+                this->tail = parentNode;
+            }
+            else{
+                parentNode->next = node->next;
+            }
+        }
+        length--;
+        delete node;
+    }
 
     LinkedListIterator begin()
     {
@@ -124,8 +155,6 @@ class LinkedList
         }
         return NULL;
     }
-
-
 };
 
 int main()
@@ -137,5 +166,8 @@ int main()
     list->InsertLast(6);
     list->PrintList(); 
     list->InsertAfter(list->find(3),99);
+    list->PrintList(); 
+
+    list->DeleteNode(list->find(3));
     list->PrintList(); 
 }
