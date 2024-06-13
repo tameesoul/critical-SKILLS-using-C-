@@ -31,7 +31,7 @@ class LinkedListIterator
     LinkedListIterator next()
     {
         if (this->currentNode != NULL) {
-            this->currentNode = currentNode->next;
+            this->currentNode = this->currentNode->next;
         }
         return *this;
     }
@@ -61,6 +61,21 @@ class LinkedList
         }
     }
 
+    void InsertAfter(LinkedListNode *node, int _data)
+    {
+        if (node == NULL) {
+            cout << "The given previous node cannot be NULL\n";
+            return;
+        }
+        LinkedListNode *newNode = new LinkedListNode(_data);
+        newNode->next = node->next;
+        node->next = newNode;
+        if(node == this->tail)
+        {
+            this->tail = newNode;
+        }
+    }
+
     LinkedListIterator begin()
     {
         LinkedListIterator itr(this->head);
@@ -75,6 +90,18 @@ class LinkedList
         }
         cout<<"NULL\n";
     }
+
+    LinkedListNode *find(int _data)
+    {
+        for(LinkedListIterator itr = this->begin(); itr.current() != NULL; itr.next())
+        {
+            if(_data == itr.data())
+            {
+                return itr.current();
+            }
+        }
+        return NULL;
+    }
 };
 
 int main()
@@ -84,5 +111,7 @@ int main()
     list->InsertLast(3); 
     list->InsertLast(4); 
     list->InsertLast(6);
+    list->PrintList(); 
+    list->InsertAfter(list->find(3),99);
     list->PrintList(); 
 }
