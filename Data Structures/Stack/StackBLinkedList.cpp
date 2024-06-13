@@ -78,6 +78,4 @@ int main() {
     std::cout << "Popped element: " << stack.pop() << std::endl;
     std::cout << "Stack elements after pop: ";
     stack.display();
-
-    return 0;
 }
