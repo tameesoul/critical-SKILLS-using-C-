@@ -76,6 +76,28 @@ class LinkedList
         }
     }
 
+    linkedListNode *findParent(linkedListNode *node) {
+    for (auto itr = this->begin(); itr.current() != NULL; itr.next()) {
+      if (itr.current()->next == node) {
+        return itr.current();
+      }
+    }
+    return NULL;
+  }
+    void insertBefore(linkedListNode *node, int _data) {
+    linkedListNode *newnode = new linkedListNode(_data);
+    newnode->next = node;
+
+    linkedListNode *parentNode = this->findParent(node);
+
+    if (parentNode == NULL) {
+      this->head = newnode;
+    } else {
+      parentNode->next = newnode;
+    }
+    this->length++;
+  }
+
     LinkedListIterator begin()
     {
         LinkedListIterator itr(this->head);
@@ -102,6 +124,8 @@ class LinkedList
         }
         return NULL;
     }
+
+
 };
 
 int main()
